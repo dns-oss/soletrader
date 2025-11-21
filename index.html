@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanded Black Friday Competitiveness Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Function to download the HTML file
+        function downloadReport() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Competitive_Analysis_Report.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray Background */
+            color: #d1d5db; /* Light Gray Text */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main Report Card */
+        .report-card {
+            background-color: #1f2937; /* Lighter Gray Card Background */
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        .header {
+            background-color: #2563eb; /* Medium Blue Accent */
+            color: white;
+            padding: 20px 30px;
+            margin: -40px -40px 30px -40px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            color: #9ca3af; /* Light Blue-Gray */
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 30px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #374151;
+        }
+
+        /* Text Styles */
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* List Styles */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 1.5em;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #60a5fa; /* Blue dot */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+        }
+
+        /* Color Highlighting */
+        .text-green {
+            color: #4ade80; /* Green (text-green-400) */
+            font-weight: 600;
+        }
+
+        .text-red {
+            color: #f87171; /* Red (text-red-400) */
+            font-weight: 600;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #374151;
+        }
+
+        th {
+            background-color: #374151; /* Darker Gray Header */
+            color: #e5e7eb;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1f2937; /* Lighter row (same as card background) */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #2d3748; /* Slightly darker alternating row */
+        }
+
+        /* Button Styles */
+        .button {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .download-button {
+            background-color: #3b82f6; /* Blue */
+            color: white;
+            border: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-button:hover {
+            background-color: #2563eb;
+        }
+
+        .cta-button {
+            background-color: #10b981; /* Green CTA */
+            color: white;
+            border: none;
+            margin-top: 15px;
+        }
+
+        .cta-button:hover {
+            background-color: #059669;
+        }
+
+        /* Footer/CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-card">
+        <div class="header">
+            Expanded Black Friday Competitiveness Report
+        </div>
+
+        <div class="section-content">
+            <p>
+                This analysis reviews the performance of 4,442 products where prices were decreased in the last week, providing a comprehensive view of the Black Friday positioning.
+            </p>
+
+            <h2 class="section-heading">Executive Summary</h2>
+            <p>
+                The Black Friday strategy is highly effective, achieving nearly <span class="text-green">60% market leadership</span> across all analyzed products. The primary focus for maximized competitive edge should be on applying additional discounts to the identified underperforming brands.
+            </p>
+
+            <h2 class="section-heading">Overall Market Dominance</h2>
+            <p>
+                The analysis covers 4,442 products with recent price decreases. The total competitive products (leading or matching the market) is <span class="text-green">2,639</span>, representing <span class="text-green">59%</span> of the total analyzed products.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Product Count</th>
+                        <th>Average Price</th>
+                        <th>Competitiveness</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leading the Market</td>
+                        <td><span class="text-green">174</span></td>
+                        <td>£68.28</td>
+                        <td>Absolute cheapest price</td>
+                    </tr>
+                    <tr>
+                        <td>Matching Cheapest Competitor</td>
+                        <td><span class="text-green">2,465</span></td>
+                        <td>£86.31</td>
+                        <td>Tied for best price</td>
+                    </tr>
+                    <tr>
+                        <td>Not Cheapest</td>
+                        <td><span class="text-red">1,793</span></td>
+                        <td>-</td>
+                        <td>Opportunity area (40% of products)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="section-heading">Brand Performance Breakdown: Black Friday Winners</h2>
+            <p>
+                The following brands represent the strongest Black Friday positioning, with the majority of their products either leading the market or matching the best price.
+            </p>
+            <ul>
+                <li>
+                    <span class="text-green">LK Bennett brands</span>: 85-90% of products are market leaders or matching best prices.
+                </li>
+                <li>
+                    <span class="text-green">Dune brands</span>: 79-85% competitive with massive scale (2,600+ products).
+                </li>
+            </ul>
+
+            <h2 class="section-heading">Opportunity Areas: Underperforming Brands</h2>
+            <p>
+                These brands show lower competitiveness despite price cuts, indicating a strong opportunity for deeper discounts to maximize Black Friday impact.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand</th>
+                        <th>% Competitive (Leading/Matching)</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="text-red">New Balance</span></td>
+                        <td><span class="text-red">27-31%</span></td>
+                        <td>Consider deeper discounts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="text-red">Tommy Hilfiger</span></td>
+                        <td><span class="text-red">27-31%</span></td>
+                        <td>Consider deeper discounts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="text-red">Asics</span></td>
+                        <td><span class="text-red">27-31%</span></td>
+                        <td>Consider deeper discounts</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <span class="text-red">1,793 products (40% of the total)</span> are still not the cheapest, highlighting a general opportunity to apply further discounts for maximum competitive impact.
+            </p>
+
+            <div class="cta-section">
+                <p>Ready to discuss optimizing your strategy?</p>
+                <a href="https://meetings-eu1.hubspot.com/daniel-self" class="button cta-button" target="_blank">Book a Meeting</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="button download-button" onclick="downloadReport()">Download Report</button>
+</body>
+</html>
